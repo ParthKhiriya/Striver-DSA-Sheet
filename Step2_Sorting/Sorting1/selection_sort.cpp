@@ -1,7 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-vector<int> sortIt(vector<int> &arr) {
+void sortIt(vector<int> &arr) {
     int n = arr.size();
     for(int i=0; i<n-1; i++) {
         int mini = i;
@@ -14,8 +14,6 @@ vector<int> sortIt(vector<int> &arr) {
         arr[i] = arr[mini];
         arr[mini] = temp;
     }
-
-    return arr;
 }
 
 int main() {
@@ -25,10 +23,10 @@ int main() {
     for(int i=0; i<n; i++) {
         cin >> arr[i];
     }
-    vector<int> sortedArr = sortIt(arr);
+    sortIt(arr);
 
     for(int i=0; i<n; i++) {
-        cout << sortedArr[i] << " ";
+        cout << arr[i] << " ";
     }
     
     return 0;
